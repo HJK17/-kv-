@@ -86,7 +86,6 @@ def newpro(info_dict2):
 
 if __name__ == '__main__':
     print(">>启动随机数生成")
-    info_dict = dict()
     info_dict1 = dict()
     info_dict2 = dict()
     p1 = Process(target=crenum, args=(info_dict1,))

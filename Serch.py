@@ -4,6 +4,8 @@
 import mmap
 import contextlib
 import sys
+import time
+
 import config
 from Recover import caltime
 
@@ -28,9 +30,7 @@ def wo1(value):
         while True:
             line = m.readline().strip()
             if line.find(value) >= 0:
-                # print("结果：")
                 dict1 = eval(line.decode())
-                # print(dict1)
                 for key in dict1:
                     vl = dict1[key]
                     value1 = str(value.decode())

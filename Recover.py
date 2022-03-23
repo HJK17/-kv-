@@ -23,7 +23,7 @@ def recover():
     with contextlib.closing(mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)) as m:  # ACCESS_WRITE, ACCESS_READ
         while True:
             line = m.readline().strip()
-            dict1 = eval(line.decode())
+            dict1 = eval(line)
             for key in dict1:
                 val = dict1[key]
                 print(key, val)
